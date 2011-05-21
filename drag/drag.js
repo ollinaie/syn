@@ -8,7 +8,7 @@
 			setTimeout(arguments.callee, 1)
 			return;
 		}
-		var div = document.createElement('div')
+		var div = document.createElement('div');
 		document.body.appendChild(div);
 		Syn.helpers.extend(div.style, {
 			width: "100px",

@@ -136,4 +136,4 @@ test("focus on an element then another in another page", function(){
 	
 	
 	st.g("qunit-test-area").appendChild(iframe);
-})
+});

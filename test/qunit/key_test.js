@@ -7,33 +7,33 @@ module("funcunit/syn/key",{
 				"<textarea id='synTextArea'></textarea>"+
 				"</div></form>";
 	}
-})
-test("Key Characters", function(){
+});
+test("Key Characters", function () {
 	st.g("key").value = "";
-	Syn.key("a","key");
+	Syn.key("a", "key");
 	equals(st.g("key").value, "a", "a written");
 
 	st.g("key").value = "";
-	Syn.key("A","key");
+	Syn.key("A", "key");
 	equals(st.g("key").value, "A", "A written");
 
 	st.g("key").value = "";
-	Syn.key("1","key");
+	Syn.key("1", "key");
 	equals(st.g("key").value, "1", "1 written");
-})
+});
 
-test("Key Event Order", 1, function(){
+test("Key Event Order", 1, function () {
 	var order = [],
-		recorder = function(ev){
-			order.push(ev.type)
+		recorder = function (ev) {
+			order.push(ev.type);
 		};
 
 	st.binder("key","keydown", recorder );
 	st.binder("key","keypress", recorder );
 	st.binder("key","keyup", recorder );
 	stop();
-	Syn.key("B","key", function(){
-		same(order,["keydown","keypress","keyup"],"Key order is correct")
+	Syn.key("B", "key", function () {
+		same(order, ["keydown", "keypress", "keyup"], "Key order is correct");
 		start();
 	});
 

@@ -110,7 +110,6 @@ steal.then(function(){
 			 {"keydown":[null,"key"],"keypress":[null,"key"],"keyup":[null,"key"]}	
 		}
 	};
-	
 	Syn.mouse.browsers = {
 		webkit : {"right":{"mousedown":{"button":2,"which":3},"mouseup":{"button":2,"which":3},"contextmenu":{"button":2,"which":3}},
 		          "left":{"mousedown":{"button":0,"which":1},"mouseup":{"button":0,"which":1},"click":{"button":0,"which":1}}},

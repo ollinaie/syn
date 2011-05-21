@@ -829,4 +829,4 @@ steal.then(function(){
 
 		window.Syn = Syn;
 }());
-})
+});

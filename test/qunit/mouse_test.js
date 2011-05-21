@@ -9,9 +9,9 @@ module("funcunit/syn/mouse",{
 			"<input type='submit' id='submit'/></div></form>"
 
 	}
-})
+});
 
-test("Syn basics", function(){
+test("Syn basics", function () {
 
 				ok(Syn,"Syn exists")
 
@@ -248,7 +248,7 @@ test("Click HTML causes blur  change", function(){
 })
 test("Right Click", function(){
 	st.g("qunit-test-area").innerHTML = "<div id='one'>right click me</div>";
-	stop()
+	stop();
 	var context = 0;
 	st.binder("one","contextmenu",function(){
 		context++;
